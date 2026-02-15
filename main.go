@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	clientecontroller "tiendaapp/Controllers"
+	cliente "tiendaapp/Controllers"
 	utilidades "tiendaapp/Utilidades"
 )
 
@@ -23,7 +23,7 @@ func main() {
 			fmt.Println("Iniciando sesión...")
 		case 2:
 			fmt.Println("Registrando usuario...")
-			clientecontroller.ClienteController()
+			cliente.NuevoCliente()
 		case 3:
 			fmt.Println("Saliendo...")
 			return
