@@ -3,6 +3,7 @@ package views
 import (
 	"fmt"
 	clientecontroller "tiendaapp/Controllers"
+	helps "tiendaapp/Utilidades"
 )
 
 func UsuarioView() {
@@ -10,6 +11,7 @@ func UsuarioView() {
 	opcion := -1
 
 	for opcion != 0 {
+
 		fmt.Println("1. Crear Usuario")
 		fmt.Println("2. Listar Usuarios")
 		fmt.Println("3. Eliminar Usuario")
@@ -17,6 +19,7 @@ func UsuarioView() {
 		fmt.Print("Seleccione una opción: ")
 		fmt.Scanln(&opcion)
 
+		helps.CleanScreen()
 		switch opcion {
 		case 1:
 			fmt.Println("Crear Usuario")
