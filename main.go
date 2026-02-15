@@ -10,7 +10,7 @@ func main() {
 
 	fmt.Println("******************BIENVENIDO A LA TIENDA APP******************")
 	opcion := -1
-	helps.CleanScreen()
+
 	for opcion != 0 {
 		fmt.Println("1. Gestionar Usuarios")
 		fmt.Println("2. Gestionar Productos")
@@ -22,9 +22,11 @@ func main() {
 		fmt.Print("Seleccione una opción: ")
 		fmt.Scanln(&opcion)
 
+		helps.CleanScreen()
+
 		switch opcion {
 		case 1:
-			fmt.Println("Gestionar Usuarios")
+
 			// Lógica para gestionar usuarios
 			view.UsuarioView()
 		case 2:

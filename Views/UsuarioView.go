@@ -7,7 +7,7 @@ import (
 )
 
 func UsuarioView() {
-	fmt.Println("UsuarioView")
+	fmt.Println("******************GESTIÓN DE USUARIOS******************")
 	opcion := -1
 
 	for opcion != 0 {
@@ -19,10 +19,10 @@ func UsuarioView() {
 		fmt.Print("Seleccione una opción: ")
 		fmt.Scanln(&opcion)
 
-		helps.CleanScreen()
 		switch opcion {
+
 		case 1:
-			fmt.Println("Crear Usuario")
+			helps.CleanScreen()
 			clientecontroller.NuevoCliente()
 			// Lógica para crear un usuario
 		case 2:
