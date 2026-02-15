@@ -3,6 +3,7 @@ package cliente
 import "encoding/json"
 
 type Cliente struct {
+	Id          int
 	Nombre      string
 	RazonSocial string
 	Correo      string
@@ -13,6 +14,7 @@ type Cliente struct {
 
 func ClienteVacio() *Cliente {
 	return &Cliente{
+		Id:          0,
 		Nombre:      "",
 		Correo:      "",
 		Direccion:   "",
@@ -22,8 +24,9 @@ func ClienteVacio() *Cliente {
 }
 
 // Constructor
-func NewCliente(nombre string, correo string, direccion string, telefono string) *Cliente {
+func NewCliente(id int, nombre string, correo string, direccion string, telefono string) *Cliente {
 	return &Cliente{
+		Id:          id,
 		Nombre:      nombre,
 		Correo:      correo,
 		Direccion:   direccion,

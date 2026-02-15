@@ -1,4 +1,4 @@
-package cliente
+package Controllers
 
 import (
 	"fmt"

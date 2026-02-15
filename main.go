@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	login "tiendaapp/Auth"
 	cliente "tiendaapp/Controllers"
-	utilidades "tiendaapp/Utilidades"
 )
 
 func main() {
@@ -12,15 +12,16 @@ func main() {
 	opcion := 0
 	for opcion != 3 {
 		fmt.Println("1. Iniciar sesión")
-		fmt.Println("2. Registrarse")
+		fmt.Println("2. Nuevo Cliente")
 		fmt.Println("3. Salir")
 		fmt.Scanln(&opcion)
 
 		//limpiar pantalla
-		utilidades.CleanScreen()
+		//utilidades.CleanScreen()
 		switch opcion {
 		case 1:
 			fmt.Println("Iniciando sesión...")
+			login.Login()
 		case 2:
 			fmt.Println("Registrando usuario...")
 			cliente.NuevoCliente()
@@ -30,7 +31,7 @@ func main() {
 		default:
 			fmt.Println("Opción inválida")
 		}
-		utilidades.CleanScreen()
+		//utilidades.CleanScreen()
 	}
 
 }
