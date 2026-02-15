@@ -5,12 +5,9 @@ import (
 	clienterepository "tiendaapp/Repositories"
 )
 
-func NuevoCliente() {
+func NuevoCliente(cliente cliente.Cliente) {
 
-	cliente1 := cliente.NewCliente(1, "Piero", "", "Calle Falsa 123", "555-1234")
-
-	clienterepository.NuevoCliente(*cliente1)
-
+	clienterepository.NuevoCliente(cliente)
 }
 
 func EliminarCliente(id int) {

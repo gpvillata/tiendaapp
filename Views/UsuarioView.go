@@ -3,6 +3,7 @@ package views
 import (
 	"fmt"
 	clientecontroller "tiendaapp/Controllers"
+	cliente "tiendaapp/Dominio/Clientes"
 	helps "tiendaapp/Utilidades"
 )
 
@@ -23,7 +24,28 @@ func UsuarioView() {
 
 		case 1:
 			helps.CleanScreen()
-			clientecontroller.NuevoCliente()
+
+			var nombre string
+			var razonsocial string
+			var correo string
+			var direccion string
+			var telefono string
+
+			fmt.Println("Crear Cliente")
+			fmt.Println("Nombre:")
+			fmt.Scanln(&nombre)
+			fmt.Println("Razón Social:")
+			fmt.Scanln(&razonsocial)
+			fmt.Println("Correo:")
+			fmt.Scanln(&correo)
+			fmt.Println("Dirección:")
+			fmt.Scanln(&direccion)
+			fmt.Println("Teléfono:")
+			fmt.Scanln(&telefono)
+
+			cliente := cliente.NewCliente(0, nombre, correo, direccion, telefono)
+
+			clientecontroller.NuevoCliente(cliente)
 			// Lógica para crear un usuario
 		case 2:
 			fmt.Println("Listar Usuarios")

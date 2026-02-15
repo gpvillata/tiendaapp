@@ -12,8 +12,8 @@ type Cliente struct {
 	TipoCliente string
 }
 
-func ClienteVacio() *Cliente {
-	return &Cliente{
+func ClienteVacio() Cliente {
+	return Cliente{
 		Id:          0,
 		Nombre:      "",
 		Correo:      "",
@@ -24,8 +24,8 @@ func ClienteVacio() *Cliente {
 }
 
 // Constructor
-func NewCliente(id int, nombre string, correo string, direccion string, telefono string) *Cliente {
-	return &Cliente{
+func NewCliente(id int, nombre string, correo string, direccion string, telefono string) Cliente {
+	return Cliente{
 		Id:          id,
 		Nombre:      nombre,
 		Correo:      correo,
@@ -36,11 +36,11 @@ func NewCliente(id int, nombre string, correo string, direccion string, telefono
 	}
 }
 
-func DeleteCliente(c *Cliente) {
-	c = nil
+func DeleteCliente(c Cliente) {
+	c = ClienteVacio()
 }
 
-func SaveCliente(c *Cliente) *Cliente {
+func SaveCliente(c Cliente) Cliente {
 	json.Marshal(c)
 	return c
 }

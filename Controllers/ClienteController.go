@@ -1,12 +1,13 @@
 package Controllers
 
 import (
-	clienteservice "tiendaapp/Services"
+	cliente "tiendaapp/Dominio/Clientes"
+	services "tiendaapp/Services"
 )
 
-func NuevoCliente() {
+func NuevoCliente(cliente cliente.Cliente) {
 
-	clienteservice.NuevoCliente()
+	services.NuevoCliente(cliente)
 
 }
 func EliminarCliente(id int) {
