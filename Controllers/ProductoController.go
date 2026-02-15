@@ -9,4 +9,6 @@ func NuevoProducto() {
 func EliminarProducto(id int) {
 
 }
-func BuscarProducto(id int)
+func BuscarProducto(id int) {
+
+}
