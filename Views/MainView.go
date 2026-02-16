@@ -10,6 +10,7 @@ func MainView() {
 	opcion := -1
 
 	for opcion != 0 {
+		helps.CleanScreen()
 		fmt.Println("1. Gestionar Usuarios")
 		fmt.Println("2. Gestionar Productos")
 		fmt.Println("3. Gestionar Pedidos")
@@ -19,8 +20,6 @@ func MainView() {
 		fmt.Println("0. Salir")
 		fmt.Print("Seleccione una opción: ")
 		fmt.Scanln(&opcion)
-
-		helps.CleanScreen()
 
 		switch opcion {
 		case 1:
