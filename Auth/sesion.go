@@ -2,18 +2,13 @@ package auth
 
 import "fmt"
 
-func Login() {
-	var usuario string
-	var password string
-	fmt.Println("*****************INICIO DE SESION**************")
-	fmt.Println("Usuario:")
-	fmt.Scan(usuario)
-	fmt.Println("Password:")
-	fmt.Scan(password)
-	if usuario != "" && password != "" {
-		fmt.Println("Iniciando sesion.....", usuario)
-	} else {
-		fmt.Println("Error al inciar sesion")
+func Login(usuario, password string) bool {
+
+	if usuario == "admin" && password == "admin123" {
+		fmt.Println("Login exitoso")
+		return true
 	}
+	fmt.Println("Login fallido")
+	return false
 
 }
