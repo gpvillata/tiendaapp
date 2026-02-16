@@ -11,6 +11,7 @@ func MainView() {
 
 	for opcion != 0 {
 		helps.CleanScreen()
+		fmt.Println("******************MENÚ PRINCIPAL******************")
 		fmt.Println("1. Gestionar Usuarios")
 		fmt.Println("2. Gestionar Productos")
 		fmt.Println("3. Gestionar Pedidos")

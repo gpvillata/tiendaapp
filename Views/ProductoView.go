@@ -7,7 +7,7 @@ import (
 )
 
 func ProductoView() {
-	fmt.Println("Vista de productos")
+	fmt.Println("******************GESTIÓN DE PRODUCTOS******************")
 	fmt.Println("Ingrese los datos del producto:")
 	var id int
 	var nombre string
