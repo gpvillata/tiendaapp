@@ -13,3 +13,6 @@ func NuevoProducto(producto producto.Producto) {
 	fmt.Println("Nuevo producto creado:", producto)
 
 }
+func EliminarProducto(id int) {
+	fmt.Println("Eliminando el producto:", id)
+}

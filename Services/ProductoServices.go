@@ -8,3 +8,7 @@ import (
 func NuevoProducto(producto producto.Producto) {
 	productorepository.NuevoProducto(producto)
 }
+
+func EliminarProducto(id int) {
+	productorepository.EliminarProducto(id)
+}
