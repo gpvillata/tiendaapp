@@ -12,7 +12,9 @@ Aplicación de consola en Go para gestionar tu tienda de forma eficiente.
 - 📊 **Reportes** - Visualiza estadísticas y resúmenes
 - 💾 **Persistencia** - Almacenamiento seguro de datos
 
-## 🚀 Inicio Rápido
+## 🚀 Inicio Rápido 
+
+
 
 ```bash
 go run main.go
