@@ -1,14 +1,10 @@
 package Controllers
 
-import "fmt"
+import (
+	producto "tiendaapp/Dominio/Productos"
+	services "tiendaapp/Services"
+)
 
-func NuevoProducto() {
-	fmt.Println("Nuevo Producto")
-}
-
-func EliminarProducto(id int) {
-
-}
-func BuscarProducto(id int) {
-
+func NuevoProducto(prod producto.Producto) {
+	services.NuevoProducto(prod)
 }

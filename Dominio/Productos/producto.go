@@ -13,11 +13,20 @@ type Producto struct {
 	Estado       string
 }
 
-func ProductoVacio() *Producto {
-	return &Producto{
+func ProductoVacio() Producto {
+	return Producto{
 		Id:       0,
 		Nombre:   "",
 		Precio:   0,
 		Cantidad: 0,
+	}
+}
+
+func NewProducto(id int, nombre string, precio float64, cantidad int) Producto {
+	return Producto{
+		Id:       id,
+		Nombre:   nombre,
+		Precio:   precio,
+		Cantidad: cantidad,
 	}
 }
